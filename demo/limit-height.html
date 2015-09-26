@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Block</title>
+  <script src="../src/js/jquery-1.11.3.min.js"></script>
+  <script src="../src/js/jquery.sticky-block.js"></script>
+  <link rel="stylesheet" href="css/demo.css">
+
+  <script>
+    $(document).ready(function() {
+
+      var footer = $('.footer');
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'start': {
+          'element': $('.js-start'),
+          'offset': 20,
+          'border': 'bottom'
+        },
+        'end': {
+          'element': footer,
+          'offset': 20
+        }
+      });
+
+    });
+  </script>
+</head>
+<body>
+<div class="header">
+  <ul class="nav">
+    <li>
+      <a href="single.html">Single</a>
+    </li>
+    <li>
+      <a href="multi-block.html">Multi block</a>
+    </li>
+    <li>
+      <a href="multi-float.html">Multi float</a>
+    </li>
+    <li>
+      <a href="menu-float.html">Menu float</a>
+    </li>
+    <li>
+      <a href="hidden-float.html">Hidden float</a>
+    </li>
+    <li>
+      <a href="dinamic-data.html">Dinamic data</a>
+    </li>
+    <li>
+      <a class="active" href="limit-height.html">Limit Height</a>
+    </li>
+    <li>
+      <a href="animated.html">Animated</a>
+    </li>
+    <li>
+      <a class="github" target="_blank" href="https://github.com/M-Ulyanov/stickyBlock">Download</a>
+    </li>
+  </ul>
+</div>
+<div class="wrapper">
+  <div class="content-default">
+    <h2 class="title">main content</h2>
+    <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+   </p>
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+  </div>
+  <div class="sidebar-300">
+    <div class="static-block">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="static-block">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="float-block js-float-block float-block--big">
+      <h2 class="title">I'm not floating<br>need more space</h2>
+    </div>
+    <div class="static-block static-block--big">
+      <h2 class="title">I'm big static</h2>
+    </div>
+    <div class="static-block js-start ">
+      <h2 class="title">I'm static</h2>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <h2 class="title">footer</h2>
+</div>
+</body>
+</html>
