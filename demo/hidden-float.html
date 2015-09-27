@@ -13,29 +13,38 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
+
         afterLoad($(this), 5);
-      });
 
+        var footer = $('.footer');
+        $('.js-float-block').stickyBlock({
+          'top': 20,
+          'animate': 'bounceIn',
+          'start': {
+            'element': $('.js-start'),
+            'offset': 0,
+            'border': 'bottom'
+          },
+          'end': {
+            'element': footer,
+            'offset': 20
+          }
+        });
 
-      var footer = $('.footer');
-      $('.js-float-block').stickyBlock({
-        'top': 20,
-        'animate': 'bounceIn',
-        'start': {
-          'element': $('.js-start'),
-          'offset': 0,
-          'border': 'bottom'
-        },
-        'end': {
-          'element': footer,
-          'offset': 20
-        }
       });
 
     });
   </script>
 </head>
 <body>
+<div class="before-header">
+  <div class="before-header-inner">
+    <h2>
+      <span class="name">stickyBlock.js </span>
+      <span class="name-text">- easily make any block floating on your page!</span>
+    </h2>
+  </div>
+</div>
 <div class="header"></div>
 <div class="wrapper">
   <div class="content-default">

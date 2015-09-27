@@ -15,16 +15,13 @@
 
         afterLoad($(this), 1);
 
-        setTimeout(function() {
-          $('.js-float-block').stickyBlock({
-            'top': 0,
-            'end': {
-              'element': $('.footer'),
-              'offset': 20
-            }
-          });
-
-        }, 400);
+        $('.js-float-block').stickyBlock({
+          'top': 0,
+          'end': {
+            'element': $('.footer'),
+            'offset': 20
+          }
+        });
 
       });
 
@@ -32,6 +29,14 @@
   </script>
 </head>
 <body>
+<div class="before-header">
+  <div class="before-header-inner">
+    <h2>
+      <span class="name">stickyBlock.js </span>
+      <span class="name-text">- easily make any block floating on your page!</span>
+    </h2>
+  </div>
+</div>
 <div class="header"></div>
 <div class="wrapper">
   <div class="content-default">
@@ -109,7 +114,7 @@
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
   </div>
-  <div class="sidebar-300">
+  <div class="sidebar-300" style="padding-top: 20px;">
     <div class="float-block js-float-block">
       <h2 class="title">I'm floating</h2>
     </div>

@@ -96,7 +96,7 @@
      */
     setEvents: function () {
 
-      $(window).on('scroll resize', function () {
+      $(window).on('scroll resize load', function () {
         for (var block in stickyBlocks) {
           if (stickyBlocks.hasOwnProperty(block)) {
             methods.updatePosition(stickyBlocks[block]);

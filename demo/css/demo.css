@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +9,8 @@
 body {
   color: #333;
   background: #FFF;
-  font: 16px Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   line-height: 1.3em;
 }
 p {
@@ -15,6 +19,15 @@ p {
 
 
 /* header */
+.before-header {
+  background: #ECF0F5;
+  padding: 15px;
+}
+.before-header-inner {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
 .header {
   display: none;
   background: #34495E;
@@ -32,12 +45,12 @@ p {
   display: inline-block;
 }
 .nav li a {
+  padding: 12px 10px;
   display: inline-block;
   color: #FFF;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 15px;
 }
 .nav li a:hover,
 .nav li a.active {
@@ -139,4 +152,16 @@ p {
 }
 .info a:hover {
   text-decoration: none;
+}
+.name {
+  background: #E74C3B;
+  color: #FFF;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.name-text {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
 }

@@ -13,31 +13,40 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
+
         afterLoad($(this), 8);
-      });
 
+        var effects = ['fadeIn', 'fadeInDown', 'bounceInDown', 'bounceIn', 'slideInDown', 'zoomInDown', 'flipInX', 'flipInY'];
 
-      var effects = ['fadeIn', 'fadeInDown', 'bounceInDown', 'bounceIn', 'slideInDown', 'zoomInDown', 'flipInX', 'flipInY'];
-
-      $('.js-float-block').each(function(i) {
-        $(this).stickyBlock({
-          'top': 20,
-          'animate': effects[i],
-          'start': {
-            'element': $('.js-start-' + i),
-            'border': 'bottom'
-          },
-          'end': {
-            'element': $('.js-end-' + i),
-            'offset': 20
-          }
+        $('.js-float-block').each(function(i) {
+          $(this).stickyBlock({
+            'top': 20,
+            'animate': effects[i],
+            'start': {
+              'element': $('.js-start-' + i),
+              'border': 'bottom'
+            },
+            'end': {
+              'element': $('.js-end-' + i),
+              'offset': 20
+            }
+          });
         });
+
       });
 
     });
   </script>
 </head>
 <body>
+<div class="before-header">
+  <div class="before-header-inner">
+    <h2>
+      <span class="name">stickyBlock.js </span>
+      <span class="name-text">- easily make any block floating on your page!</span>
+    </h2>
+  </div>
+</div>
 <div class="header"></div>
 <div class="wrapper">
   <div class="sidebar-300 left">
