@@ -12,28 +12,30 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 6);
+      });
 
-        var footer = $('.footer');
+    });
 
-        $('.js-float-block').stickyBlock({
-          'top': 20,
-          'start': {
-            'element': $('.js-start'),
-            'border': 'bottom'
-          },
-          'end': {
-            'element': footer,
-            'offset': 20
-          }
-        });
+    $(window).load(function() {
 
-        $('.js-dinamic-height').on('click', function() {
-          var height = $(this).height() + 50;
-          $(this).height(height);
-        });
+      var footer = $('.footer');
 
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'start': {
+          'element': $('.js-start'),
+          'border': 'bottom'
+        },
+        'end': {
+          'element': footer,
+          'offset': 20
+        }
+      });
+
+      $('.js-dinamic-height').on('click', function() {
+        var height = $(this).height() + 50;
+        $(this).height(height);
       });
 
     });

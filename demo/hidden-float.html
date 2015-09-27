@@ -13,24 +13,26 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 5);
+      });
 
-        var footer = $('.footer');
-        $('.js-float-block').stickyBlock({
-          'top': 20,
-          'animate': 'bounceIn',
-          'start': {
-            'element': $('.js-start'),
-            'offset': 0,
-            'border': 'bottom'
-          },
-          'end': {
-            'element': footer,
-            'offset': 20
-          }
-        });
+    });
 
+    $(window).load(function() {
+
+      var footer = $('.footer');
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'animate': 'bounceIn',
+        'start': {
+          'element': $('.js-start'),
+          'offset': 0,
+          'border': 'bottom'
+        },
+        'end': {
+          'element': footer,
+          'offset': 20
+        }
       });
 
     });

@@ -12,38 +12,40 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 1);
+      });
 
-        $('.js-float-block').stickyBlock({
-          'top': 20,
-          'start': {
-            'element': $('.before-header'),
-            'border': 'bottom',
-            'offset': 44
-          },
-          'end': {
-            'element': $('.footer'),
-            'offset': 20
-          }
-        });
+    });
 
-        $('.js-float-block').on('sticky-block-start', function() {
-          $(this).find('.status').text('Status: Start');
-          console.log('start');
-        });
+    $(window).load(function() {
 
-        $('.js-float-block').on('sticky-block-end', function() {
-          $(this).find('.status').text('Status: End');
-          console.log('end');
-        });
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'start': {
+          'element': $('.before-header'),
+          'border': 'bottom',
+          'offset': 44
+        },
+        'end': {
+          'element': $('.footer'),
+          'offset': 20
+        }
+      });
+
+      $('.js-float-block').on('sticky-block-start', function() {
+        $(this).find('.status').text('Status: Start');
+        console.log('start');
+      });
+
+      $('.js-float-block').on('sticky-block-end', function() {
+        $(this).find('.status').text('Status: End');
+        console.log('end');
+      });
 
 
-        $('.js-float-block').on('sticky-block-default', function() {
-          $(this).find('.status').text('Status: Default');
-          console.log('default');
-        });
-
+      $('.js-float-block').on('sticky-block-default', function() {
+        $(this).find('.status').text('Status: Default');
+        console.log('default');
       });
 
     });

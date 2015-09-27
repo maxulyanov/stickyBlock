@@ -13,26 +13,28 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 8);
+      });
 
-        var effects = ['fadeIn', 'fadeInDown', 'bounceInDown', 'bounceIn', 'slideInDown', 'zoomInDown', 'flipInX', 'flipInY'];
+    });
 
-        $('.js-float-block').each(function(i) {
-          $(this).stickyBlock({
-            'top': 20,
-            'animate': effects[i],
-            'start': {
-              'element': $('.js-start-' + i),
-              'border': 'bottom'
-            },
-            'end': {
-              'element': $('.js-end-' + i),
-              'offset': 20
-            }
-          });
+    $(window).load(function() {
+
+      var effects = ['fadeIn', 'fadeInDown', 'bounceInDown', 'bounceIn', 'slideInDown', 'zoomInDown', 'flipInX', 'flipInY'];
+
+      $('.js-float-block').each(function(i) {
+        $(this).stickyBlock({
+          'top': 20,
+          'animate': effects[i],
+          'start': {
+            'element': $('.js-start-' + i),
+            'border': 'bottom'
+          },
+          'end': {
+            'element': $('.js-end-' + i),
+            'offset': 20
+          }
         });
-
       });
 
     });

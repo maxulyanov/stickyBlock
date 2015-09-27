@@ -102,7 +102,7 @@
      */
     setEvents: function () {
 
-      $(window).on('scroll resize load', function () {
+      $(window).on('scroll resize', function () {
         for (var block in stickyBlocks) {
           if (stickyBlocks.hasOwnProperty(block)) {
             methods.updatePosition(stickyBlocks[block]);
@@ -182,7 +182,7 @@
       var wrapper = $(block.wrapper);
 
       var scrollTop = window.pageYOffset;
-      var limit = data.endPosition - data.height - options.end.offset;
+      var limit = data.endPosition - data.height - options.end.offset + parseInt($(block.current).css('margin-bottom'));
       var showCurrentBlock = true;
       var showCloneBlock = true;
 

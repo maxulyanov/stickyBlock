@@ -12,26 +12,28 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 4);
+      });
 
-        var footer = $('.footer');
+    });
 
-        $('.js-float-block').stickyBlock({
-          'end': {
-            'element': footer,
-            'offset': 20
-          }
-        });
+    $(window).load(function() {
 
-        $('.js-menu-block').stickyBlock({
-          'end': {
-            'element': footer,
-            'offset': 150,
-          },
-          'wrapperClass': 'menu-test-class'
-        });
+      var footer = $('.footer');
 
+      $('.js-float-block').stickyBlock({
+        'end': {
+          'element': footer,
+          'offset': 20
+        }
+      });
+
+      $('.js-menu-block').stickyBlock({
+        'end': {
+          'element': footer,
+          'offset': 150
+        },
+        'wrapperClass': 'menu-test-class'
       });
 
     });

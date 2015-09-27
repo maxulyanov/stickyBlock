@@ -12,22 +12,25 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 2);
+      });
 
-        $('.js-float-block').stickyBlock({
-          'top': 20,
-          'start': {
-            'offset': 20,
-            'element': $('.js-start'),
-            'border': 'bottom'
-          },
-          'end': {
-            'element': $('.footer'),
-            'offset': 20
-          }
-        });
+    });
 
+
+    $(window).load(function() {
+
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'start': {
+          'offset': 20,
+          'element': $('.js-start'),
+          'border': 'bottom'
+        },
+        'end': {
+          'element': $('.footer'),
+          'offset': 20
+        }
       });
 
     });

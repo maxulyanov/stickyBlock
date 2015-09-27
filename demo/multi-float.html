@@ -12,38 +12,41 @@
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-
         afterLoad($(this), 3);
-
-        var footer = $('.footer');
-
-        $('.js-float-block').stickyBlock({
-          'top': 20,
-          'start': {
-            'element': $('.js-start'),
-            'border': 'bottom'
-          },
-          'end': {
-            'element': footer,
-            'offset': 20
-          }
-        });
-
-        $('.js-float-block-2').stickyBlock({
-          'top': 20,
-          'start': {
-            'element': $('.js-start-2'),
-            'border': 'bottom'
-          },
-          'end': {
-            'element': footer,
-            'offset': 100
-          }
-        });
-
       });
 
     });
+
+    $(window).load(function() {
+
+      var footer = $('.footer');
+
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'start': {
+          'element': $('.js-start'),
+          'border': 'bottom'
+        },
+        'end': {
+          'element': footer,
+          'offset': 20
+        }
+      });
+
+      $('.js-float-block-2').stickyBlock({
+        'top': 20,
+        'start': {
+          'element': $('.js-start-2'),
+          'border': 'bottom'
+        },
+        'end': {
+          'element': footer,
+          'offset': 100
+        }
+      });
+
+    })
+
   </script>
 </head>
 <body>
