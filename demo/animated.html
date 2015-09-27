@@ -7,9 +7,15 @@
   <script src="../src/js/jquery-1.11.3.min.js"></script>
   <script src="../src/js/jquery.sticky-block.js"></script>
   <link rel="stylesheet" href="css/demo.css">
+  <script src="js/demo.js"></script>
 
   <script>
     $(document).ready(function() {
+
+      $('.header').load('navigation.html', function() {
+        afterLoad($(this), 8);
+      });
+
 
       var effects = ['fadeIn', 'fadeInDown', 'bounceInDown', 'bounceIn', 'slideInDown', 'zoomInDown', 'flipInX', 'flipInY'];
 
@@ -32,37 +38,7 @@
   </script>
 </head>
 <body>
-<div class="header">
-  <ul class="nav">
-    <li>
-      <a href="single.html">Single</a>
-    </li>
-    <li>
-      <a href="multi-block.html">Multi block</a>
-    </li>
-    <li>
-      <a href="multi-float.html">Multi float</a>
-    </li>
-    <li>
-      <a href="menu-float.html">Menu float</a>
-    </li>
-    <li>
-      <a href="hidden-float.html">Hidden float</a>
-    </li>
-    <li>
-      <a href="dinamic-data.html">Dinamic data</a>
-    </li>
-    <li>
-      <a href="limit-height.html">Limit Height</a>
-    </li>
-    <li>
-      <a class="active" href="animated.html">Animated</a>
-    </li>
-    <li>
-      <a class="github" target="_blank" href="https://github.com/M-Ulyanov/stickyBlock">Download</a>
-    </li>
-  </ul>
-</div>
+<div class="header"></div>
 <div class="wrapper">
   <div class="sidebar-300 left">
     <div class="static-block static-block--big">
