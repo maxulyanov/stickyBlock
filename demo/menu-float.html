@@ -11,26 +11,30 @@
   <script>
     $(document).ready(function() {
 
+      var footer = $('.footer');
+
       $('.header').load('navigation.html', function() {
         afterLoad($(this), 4);
-      });
 
-      var footer = $('.footer');
-      $('.js-float-block').stickyBlock({
-        'end': {
-          'element': footer,
-          'offset': 20
-        }
-      });
+        setTimeout(function() {
 
-      $('.js-menu-block').stickyBlock({
-        'end': {
-          'element': footer,
-          'offset': 150,
-        },
-        'wrapperClass': 'menu-test-class'
-      });
+          $('.js-float-block').stickyBlock({
+            'end': {
+              'element': footer,
+              'offset': 20
+            }
+          });
 
+          $('.js-menu-block').stickyBlock({
+            'end': {
+              'element': footer,
+              'offset': 150,
+            },
+            'wrapperClass': 'menu-test-class'
+          });
+
+        }, 400);
+      });
 
     });
   </script>
