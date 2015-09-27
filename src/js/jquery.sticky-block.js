@@ -1,3 +1,8 @@
+// stickyBlock Plugin v1.0.0 for jQuery
+// Author: M.Ulyanov
+// Created: 26/09/2015
+// Example: http://m-ulyanov.github.io/stickyblock/demo/
+
 ;(function ($) {
 
   'use struct';
@@ -48,7 +53,8 @@
         'options': currentOptions,
         'data': null,
         'dataInit': false,
-        'defaultShow': defaultShow
+        'defaultShow': defaultShow,
+        'status': null
       };
       stickyBlocks[countId].data = methods.setData(stickyBlocks[countId]);
 
@@ -190,18 +196,20 @@
           'top': limit
         })
         .addClass(classes.absolute).removeClass(classes.fixed);
+        methods.callEvents(block, 'sticky-block-end');
       }
       else if (scrollTop >= data.startPosition + options.start.offset) {
         wrapper.css({
           'top': options.top
         })
         .addClass(classes.fixed).removeClass(classes.absolute);
+        methods.callEvents(block, 'sticky-block-start');
       }
       else {
         wrapper.removeClass(classes.fixed + ' ' + classes.absolute);
         showCloneBlock = false;
         showCurrentBlock = false;
-
+        methods.callEvents(block, 'sticky-block-default');
       }
 
       methods.toogleCloneBlock(block, showCloneBlock);
@@ -220,6 +228,24 @@
 
       if (block.options.cache === true) return block.data;
       return this.setData(block);
+
+    },
+
+    /**
+     * Call plugin events
+     * @param block - Element of the array stickyBlocks with unique settings
+     * @param event - Current event
+     * @returns {methods} - This object
+     */
+    callEvents: function (block, event) {
+
+      var current = $(block.current);
+      if(block.status != event) {
+        $(current).trigger(event);
+        block.status = event;
+      }
+
+      return this;
 
     },
 

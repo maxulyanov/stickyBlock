@@ -116,6 +116,7 @@ p {
 .float-block {
   margin: 0;
   background: #3397DA;
+  text-align: center;
 }
 .float-block--big {
   padding: 45px 0;
@@ -164,4 +165,9 @@ p {
   margin-left: 10px;
   font-size: 18px;
   font-weight: 500;
+}
+.status {
+  display: inline-block;
+  padding: 5px;
+  background: #3090D0;
 }

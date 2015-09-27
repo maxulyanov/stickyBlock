@@ -16,11 +16,32 @@
         afterLoad($(this), 1);
 
         $('.js-float-block').stickyBlock({
-          'top': 0,
+          'top': 20,
+          'start': {
+            'element': $('.before-header'),
+            'border': 'bottom',
+            'offset': 44
+          },
           'end': {
             'element': $('.footer'),
             'offset': 20
           }
+        });
+
+        $('.js-float-block').on('sticky-block-start', function() {
+          $(this).find('.status').text('Status: Start');
+          console.log('start');
+        });
+
+        $('.js-float-block').on('sticky-block-end', function() {
+          $(this).find('.status').text('Status: End');
+          console.log('end');
+        });
+
+
+        $('.js-float-block').on('sticky-block-default', function() {
+          $(this).find('.status').text('Status: Default');
+          console.log('default');
         });
 
       });
@@ -117,6 +138,7 @@
   <div class="sidebar-300" style="padding-top: 20px;">
     <div class="float-block js-float-block">
       <h2 class="title">I'm floating</h2>
+      <span class="status">Status: null</span>
     </div>
   </div>
 </div>
