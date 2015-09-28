@@ -36,9 +36,9 @@ Options list:
       <td>Options at the beginning of a floating</td>
       <td><code>Object</code></td>
       <td>
-        <code>'element': self</code>,<br>
-        <code>'border': 'top'</code>,<br>
-        <code>'offset': 0</code>
+        <code>'element':self</code>,<br>
+        <code>'border':'top'</code>,<br>
+        <code>'offset':0</code>
       </td>
     </tr>
     <tr>
@@ -64,9 +64,9 @@ Options list:
       <td>Options at the end of the floating</td>
       <td><code>Object</code></td>
       <td>
-        <code>'element': null</code>,<br>
-        <code>'border': 'top'</code>,<br>
-        <code>'offset':  0</code>
+        <code>'element':null</code>,<br>
+        <code>'border':'top'</code>,<br>
+        <code>'offset':0</code>
       </td>
     </tr>
     <tr>
