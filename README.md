@@ -22,73 +22,73 @@ Options list:
     <tr>
       <td>start.element</td>
       <td>-</td>
-      <td>`jQuery object`</td>
+      <td><code>jQuery object</code></td>
       <td>self</td>
     </tr>
     <tr>
       <td>start.border</td>
       <td>-</td>
-      <td>`String`</td>
+      <td><code>String</code></td>
       <td>'top'</td>
     </tr>
     <tr>
       <td>start.offset</td>
       <td>-</td>
-      <td>`Number`</td>
+      <td><code>Number</code></td>
       <td>0</td>
     </tr>
     <tr>
       <td>end</td>
       <td>-</td>
-      <td>`Object`</td>
+      <td><code>Object</code></td>
       <td>'element': null,'border': 'top','offset': 0</td>
     </tr>
     <tr>
       <td>end.element</td>
       <td>-</td>
-      <td>`jQuery object`</td>
+      <td><code>jQuery object</code></td>
       <td>null</td>
     </tr>
     <tr>
       <td>end.border</td>
       <td>-</td>
-      <td>`String`</td>
+      <td><code>String</code></td>
       <td>'top'</td>
     </tr>
     <tr>
       <td>end.offset</td>
       <td>-</td>
-      <td>`Number`</td>
+      <td><code>Number</code></td>
       <td>0</td>
     </tr>
     <tr>
       <td>top</td>
       <td>-</td>
-      <td>`Number`</td>
+      <td><code>Number</code></td>
       <td>0</td>
     </tr>
     <tr>
       <td>parent</td>
       <td>-</td>
-      <td>`jQuery object`</td>
+      <td><code>jQuery object</code></td>
       <td>null</td>
     </tr>
     <tr>
       <td>cache</td>
       <td>-</td>
-      <td><i>Boolean</i></td>
+      <td><code>Boolean</code></td>
       <td>false</td>
     </tr>
     <tr>
       <td>animate</td>
       <td>-</td>
-      <td>`String`</td>
+      <td><code>String</code></td>
       <td>false</td>
     </tr>
     <tr>
       <td>wrapperClass</td>
       <td>-</td>
-      <td>`String`</td>
+      <td><code>String</code></td>
       <td>''</td>
     </tr>
 </table>
