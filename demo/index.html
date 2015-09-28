@@ -15,23 +15,6 @@
         afterLoad($(this), 1);
       });
 
-    });
-
-    $(window).load(function() {
-
-      $('.js-float-block').stickyBlock({
-        'top': 20,
-        'start': {
-          'element': $('.before-header'),
-          'border': 'bottom',
-          'offset': 44
-        },
-        'end': {
-          'element': $('.footer'),
-          'offset': 20
-        }
-      });
-
       $('.js-float-block').on('sticky-block-start', function() {
         $(this).find('.status').text('Status: Start');
         console.log('start');
@@ -48,6 +31,22 @@
         console.log('default');
       });
 
+    });
+
+    $(window).load(function() {
+
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'start': {
+          'element': $('.before-header'),
+          'border': 'bottom',
+          'offset': 44
+        },
+        'end': {
+          'element': $('.footer'),
+          'offset': 20
+        }
+      });
     });
   </script>
 </head>
