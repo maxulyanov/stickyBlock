@@ -17,7 +17,7 @@ Options list:
       <td>start</td>
       <td>-</td>
       <td><code>Object</code></td>
-      <td>``` 'element': self,'border': 'top','offset': 0   ```</td>
+      <td>'element': self,'border': 'top','offset': 0</td>
     </tr>
     <tr>
       <td>start.element</td>
