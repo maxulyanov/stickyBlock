@@ -49,6 +49,12 @@
         $(currentOptions.parent).css('position', 'relative');
       }
 
+      // If no end element
+      if(currentOptions.end.element === null) {
+        currentOptions.end.element = $('body');
+        currentOptions.end.border = 'bottom';
+      }
+
       // Create object params current block
       stickyBlocks[countId] = {
         'current': self,
