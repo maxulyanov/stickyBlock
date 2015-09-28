@@ -3,6 +3,24 @@ stickyBlock
 Easily make any block floating on your page.
 
 ##Getting started
+1. Include jQuery
+2. Include stickyBlock
+3. Call stickyBlock after window load
+
+`<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.sticky-block.js"></script>
+<script>
+    $(window).load(function() {
+
+      $('.js-float-block').stickyBlock({
+        'top': 20,
+        'end': {
+          'element': $('.footer'),
+          'offset': 20
+        }
+      });
+    });
+    </script>`
 
 ##Options
 Options list:
@@ -99,6 +117,7 @@ Options list:
 ##Methods
 
 ##Animation effects
+Effects list:
  <code>For animation you must connect - jquery.sticky-block-animate.css</code> 
 - fadeIn
 - fadeInDown
@@ -108,7 +127,6 @@ Options list:
 - zoomInDown
 - flipInX
 - flipInY
-
 
 ##Browser Support
 
