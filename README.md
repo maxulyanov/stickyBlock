@@ -76,7 +76,7 @@ Options list:
     <tr>
       <td>cache</td>
       <td>-</td>
-      <td>`Boolean`</td>
+      <td><i>Boolean</i></td>
       <td>false</td>
     </tr>
     <tr>
@@ -99,10 +99,15 @@ Options list:
 ##Methods
 
 ##Animation effects
-Effects list:
-- 1
-- 2
-- 3
+<p>fadeIn</p>
+<p>fadeInDown</p>
+<p>bounceInDown</p>
+<p>bounceIn</p>
+<p>slideInDown</p>
+<p>zoomInDown</p>
+<p>flipInX</p>
+<p>flipInY</p>
+
 
 ##Browser Support
 
