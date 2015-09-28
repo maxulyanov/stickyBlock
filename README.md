@@ -89,13 +89,14 @@ Options list:
     </tr>
     <tr>
       <td>top</td>
-      <td>Offset top for state fixed</td>
+      <td>Offset top during the floating</td>
       <td><code>Number</code></td>
       <td><code>0</code></td>
     </tr>
     <tr>
       <td>parent</td>
-      <td>The global parent to which will be added style - <code>position: relative</code></td>
+      <td>Sets the parent of which is targeted to be absolute positioning for the final position of the current element .
+If none of the parent element does not have a <code>position: relative</code> - is the recommended setting to ignore.</td>
       <td><code>jQuery object</code></td>
       <td><code>null</code></td>
     </tr>
