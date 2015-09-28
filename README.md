@@ -120,6 +120,7 @@ Options list:
 </table>
 
 ##Events
+Events list:<br>
 <code>sticky-block-start</code> - when an element begins to float<br>
 <code>sticky-block-end</code> - when the element reaches the limit<br>
 <code>sticky-block-default</code> - when the element returns to its original location
