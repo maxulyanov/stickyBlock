@@ -1,11 +1,11 @@
 stickyBlock
 ===============
-Easily make any block floating on your page.
+This is make any block floating on your page easily
 
 ##Getting started
 1. Include jQuery
 2. Include stickyBlock
-3. Call stickyBlock his options after window load
+3. Call stickyBlock with your options after window load
 ```html
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jquery.sticky-block.js"></script>
@@ -43,7 +43,7 @@ Options list:
     </tr>
     <tr>
       <td>start.element</td>
-      <td>jQuery object (dom) to start floating</td>
+      <td>jQuery object (dom) starts floating</td>
       <td><code>jQuery_object</code></td>
       <td><code>self</code></td>
     </tr>
@@ -101,7 +101,7 @@ Options list:
     </tr>
     <tr>
       <td>cache</td>
-      <td>Сache values (it recommended only for static pages)</td>
+      <td>Сache options (it recommended only for static pages)</td>
       <td><code>Boolean</code></td>
       <td><code>false</code></td>
     </tr>
@@ -121,9 +121,9 @@ Options list:
 
 ##Events
 Events list:<br>
-<code>sticky-block-start</code> - when an element begins to float<br>
+<code>sticky-block-start</code> - when an element begins floating<br>
 <code>sticky-block-end</code> - when the element reaches the limit<br>
-<code>sticky-block-default</code> - when the element returns to its original location
+<code>sticky-block-default</code> - when the element returns to its original position
 ```html
 <script>
     $('.js-float-block').on('sticky-block-start', function() {
@@ -150,7 +150,7 @@ Events list:<br>
 
 ##Animation effects
 Effects list:<br>
- <code>For animation you must connect - jquery.sticky-block-animate.css</code> 
+ <code>You must connect - jquery.sticky-block-animate.css for animation</code> 
 - fadeIn
 - fadeInDown
 - bounceInDown
