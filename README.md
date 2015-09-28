@@ -99,14 +99,15 @@ Options list:
 ##Methods
 
 ##Animation effects
-<p>fadeIn</p>
-<p>fadeInDown</p>
-<p>bounceInDown</p>
-<p>bounceIn</p>
-<p>slideInDown</p>
-<p>zoomInDown</p>
-<p>flipInX</p>
-<p>flipInY</p>
+ <code>For animation you must connect - jquery.sticky-block-animate.css</code> 
+- fadeIn
+- fadeInDown
+- bounceInDown
+- bounceIn
+- slideInDown
+- zoomInDown
+- flipInX
+- flipInY
 
 
 ##Browser Support
