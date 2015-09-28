@@ -35,4 +35,4 @@ Effects list:
 ##Browser Support
 
 ##Example
-See example - <a href=" https://m-ulyanov.github.io/stickyblock/demo/">stickyBlock</a>
+See example - <a href="https://m-ulyanov.github.io/stickyblock/demo/">stickyBlock</a>
