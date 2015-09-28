@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 body {
+  min-width: 1300px;
   color: #333;
   background: #FFF;
   font-family: 'Roboto', sans-serif;
