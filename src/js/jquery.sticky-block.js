@@ -313,7 +313,7 @@
      */
     animate: function (block, add) {
 
-      var options = block.options;
+      var options = block.options;git
       if (!options.animate) return this;
 
       var wrapper = $(block.wrapper);
