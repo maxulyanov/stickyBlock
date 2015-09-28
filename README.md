@@ -16,7 +16,7 @@ Options list:
     <tr>
       <td>start</td>
       <td>-</td>
-      <td>`Object`</td>
+      <td><code>Object</code></td>
       <td>'element': self,'border': 'top','offset': 0</td>
     </tr>
     <tr>
