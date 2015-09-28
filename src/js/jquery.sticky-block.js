@@ -45,6 +45,10 @@
         self.parent().after(currentClone);
       }
 
+      if($(currentOptions.parent).length > 0) {
+        $(currentOptions.parent).css('position', 'relative');
+      }
+
       // Create object params current block
       stickyBlocks[countId] = {
         'current': self,
@@ -56,7 +60,9 @@
         'defaultShow': defaultShow,
         'status': null
       };
+
       stickyBlocks[countId].data = methods.setData(stickyBlocks[countId]);
+      methods.updatePosition(stickyBlocks[countId]);
 
       // Add data
       if (!$(window).data('sticky-block-events')) {
@@ -90,6 +96,7 @@
           'offset': 0
         },
         'top': 0,
+        'parent': null,
         'cache': false,
         'animate': false,
         'wrapperClass': ''
@@ -144,7 +151,8 @@
         'width': current.outerWidth(),
         'height': current.outerHeight(true),
         'startPosition': 0,
-        'endPosition': 0
+        'endPosition': 0,
+        'offsetParent': 0,
       };
 
       // Set/Update Start and End position
@@ -164,6 +172,10 @@
               '! Field "border" requires value - "top" or "bottom"');
           return false;
         }
+      }
+
+      if($(options.parent).length > 0) {
+        currentData.offsetParent = $(options.parent).offset().top;
       }
 
       return currentData;
@@ -193,7 +205,7 @@
 
       if (scrollTop >= limit - options.top) {
         wrapper.css({
-          'top': limit
+          'top': limit - data.offsetParent
         })
         .addClass(classes.absolute).removeClass(classes.fixed);
         methods.callEvents(block, 'sticky-block-end');
