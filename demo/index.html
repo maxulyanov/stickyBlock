@@ -45,8 +45,15 @@
         'end': {
           'element': $('.footer'),
           'offset': 20
+        },
+        returnToInitialState: function() {
+          if(window.innerWidth < 1280) {
+            return true;
+          }
         }
       });
+
+
     });
   </script>
 </head>

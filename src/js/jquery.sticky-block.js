@@ -1,7 +1,13 @@
-// stickyBlock Plugin v1.0.0 for jQuery
-// Author: M.Ulyanov
-// Created: 26/09/2015
-// Example: http://m-ulyanov.github.io/stickyblock/demo/
+
+/*
+ * stickyBlock: This is make any block floating on your page easily
+ * 1.1.2
+ *
+ * By Max Ulyanov
+ * Source: https://github.com/M-Ulyanov/stickyBlock
+ * Example ttp://m-ulyanov.github.io/stickyblock/demo/
+ */
+
 
 ;(function ($) {
 
@@ -18,6 +24,7 @@
   };
 
   var methods = {
+
 
     /**
      * Main method
@@ -39,6 +46,7 @@
       // Add elements to DOM
       var currentWrapper = $('<div class="sticky-block--wrapper ' + currentOptions.wrapperClass + '"></div>');
       self.wrap(currentWrapper);
+      self.attr('style', '-webkit-transform: translate3d(0,0,0);');
 
       if (defaultShow) {
         var currentClone = $('<div class="sticky-block--clone sticky-block--hidden"></div>');
@@ -84,9 +92,11 @@
 
     },
 
+
     /**
-     * Create object default options
-     * @returns {} - Default plugin options
+     *
+     * @param self
+     * @returns {{start: {element: *, border: string, offset: number}, end: {element: null, border: string, offset: number}, top: number, parent: null, cache: boolean, animate: boolean, wrapperClass: string, returnToInitialState: null}}
      */
     createDefaults: function (self) {
 
@@ -105,10 +115,12 @@
         'parent': null,
         'cache': false,
         'animate': false,
-        'wrapperClass': ''
+        'wrapperClass': '',
+        returnToInitialState: null
       }
 
     },
+
 
     /*
         Call methods plugin during DOM events
@@ -116,15 +128,20 @@
     setEvents: function () {
 
       $(window).on('scroll resize', function () {
+        updateDataBlocks();
+      });
+
+      function updateDataBlocks() {
         for (var block in stickyBlocks) {
           if (stickyBlocks.hasOwnProperty(block)) {
             methods.updatePosition(stickyBlocks[block]);
             stickyBlocks[block].data = methods.updateData(stickyBlocks[block]);
           }
         }
-      });
+      }
 
     },
+
 
     /**
      * Set and Update dynamic data plugin
@@ -188,13 +205,13 @@
 
     },
 
+
     /**
      * Calc and update of the position of DOM elements
      * @param block - Element of the array stickyBlocks with unique settings
      * @returns {methods} - This object
      */
     updatePosition: function (block) {
-
       var options = block.options;
       var data = block.data;
       var wrapper = $(block.wrapper);
@@ -203,6 +220,12 @@
       var limit = data.endPosition - data.height - options.end.offset + parseInt($(block.current).css('margin-bottom'));
       var showCurrentBlock = true;
       var showCloneBlock = true;
+
+      // return the to initial state
+      if(typeof options.returnToInitialState === 'function' && options.returnToInitialState()) {
+        setInitialState();
+        return this;
+      }
 
       // Need more space
       if ((data.endPosition - data.startPosition - options.start.offset - options.end.offset) < data.height) {
@@ -220,22 +243,31 @@
         wrapper.css({
           'top': options.top
         })
-        .addClass(classes.fixed).removeClass(classes.absolute);
+        wrapper.addClass(classes.fixed).removeClass(classes.absolute);
         methods.callEvents(block, 'sticky-block-start');
       }
       else {
+        setInitialState();
+      }
+
+      methods.toogleCloneBlock(block, showCloneBlock);
+      methods.toogleCurrentBlock(block, showCurrentBlock);
+
+
+      /**
+       *
+       */
+      function setInitialState() {
         wrapper.removeClass(classes.fixed + ' ' + classes.absolute);
         showCloneBlock = false;
         showCurrentBlock = false;
         methods.callEvents(block, 'sticky-block-default');
       }
 
-      methods.toogleCloneBlock(block, showCloneBlock);
-      methods.toogleCurrentBlock(block, showCurrentBlock);
-
       return this;
 
     },
+
 
     /**
      * Call method setData and check value cache
@@ -248,6 +280,7 @@
       return this.setData(block);
 
     },
+
 
     /**
      * Call plugin events
@@ -266,6 +299,7 @@
       return this;
 
     },
+
 
     /**
      *
@@ -294,6 +328,7 @@
 
     },
 
+
     /**
      *
      * @param block - Element of the array stickyBlocks with unique settings
@@ -310,6 +345,7 @@
       }
 
     },
+
 
     /**
      *
@@ -335,6 +371,7 @@
 
     },
 
+
     /**
      * Delete item from the plugin
      */
@@ -350,6 +387,7 @@
 
     },
 
+
     /**
      * Report error
      * @param message - Message to console.error
@@ -361,6 +399,34 @@
     }
 
   };
+
+
+  /**
+   * Detect mobile device
+   * @type {{Android: Function, BlackBerry: Function, iOS: Function, Opera: Function, Windows: Function, any: Function}}
+   */
+  var isMobile = {
+    Android: function() {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+      return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+      return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+  };
+
+
 
   // Create plugin style
   (function () {
@@ -376,6 +442,7 @@
     $(stickyBlockStyle).appendTo(document.head);
 
   })();
+
 
   /**
    * Add new function to jQuery.fn

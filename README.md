@@ -117,6 +117,12 @@ If none of the parent element does not have a <code>position: relative</code> - 
       <td>Add class to the wrapper</td>
       <td><code>String</code></td>
       <td><code>''</code></td>
+    </tr> 
+    <tr>
+      <td>returnToInitialState</td>
+      <td>To return to the initial state. Function must return true</td>
+      <td><code>Function</code></td>
+      <td><code>null</code></td>
     </tr>
 </table>
 

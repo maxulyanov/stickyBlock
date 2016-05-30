@@ -1,0 +1,19 @@
+{
+  "name": "sticky-block",
+  "version": "1.1.2",
+  "description": "This is make any block floating on your page easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-Ulyanov/stickyBlock.git"
+  },
+  "author": "Max Ulyanov",
+  "license": " GNU GENERAL PUBLIC LICENSE",
+  "bugs": {
+    "url": "https://github.com/M-Ulyanov/stickyBlock/issues"
+  },
+  "homepage": "https://github.com/M-Ulyanov/stickyBlock#readme"
+}
