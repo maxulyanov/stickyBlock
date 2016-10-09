@@ -3,32 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Sticky Block</title>
-  <script src="../src/js/jquery-1.11.3.min.js"></script>
-  <script src="../src/js/jquery.sticky-block.js"></script>
-  <link rel="stylesheet" href="css/demo.css">
-  <script src="js/demo.js"></script>
+  <script src="src/js/jquery-1.11.3.min.js"></script>
+  <script src="src/js/jquery.sticky-block.js"></script>
+  <link rel="stylesheet" href="example/css/demo.css">
+  <script src="example/js/demo.js"></script>
 
   <script>
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-        afterLoad($(this), 2);
+        afterLoad($(this), 7);
       });
 
     });
 
-
     $(window).load(function() {
 
+      var footer = $('.footer');
       $('.js-float-block').stickyBlock({
         'top': 20,
         'start': {
-          'offset': 20,
           'element': $('.js-start'),
+          'offset': 20,
           'border': 'bottom'
         },
         'end': {
-          'element': $('.footer'),
+          'element': footer,
           'offset': 20
         }
       });
@@ -94,49 +94,22 @@
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
   </div>
   <div class="sidebar-300">
+    <div class="static-block">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="static-block">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="float-block js-float-block float-block--big">
+      <h2 class="title">I'm not floating<br>need more space</h2>
+    </div>
     <div class="static-block static-block--big">
-      <h2 class="title">I'm  big static</h2>
-    </div>
-    <div class="float-block js-float-block">
-      <h2 class="title">I'm floating</h2>
-    </div>
-    <div class="static-block">
-      <h2 class="title">I'm static</h2>
-    </div>
-    <div class="static-block">
-      <h2 class="title">I'm static</h2>
-    </div>
-    <div class="static-block js-start static-block--big">
       <h2 class="title">I'm big static</h2>
+    </div>
+    <div class="static-block js-start ">
+      <h2 class="title">I'm static</h2>
     </div>
   </div>
 </div>

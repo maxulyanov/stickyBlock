@@ -3,50 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Sticky Block</title>
-  <script src="../src/js/jquery-1.11.3.min.js"></script>
-  <script src="../src/js/jquery.sticky-block.js"></script>
-  <link rel="stylesheet" href="css/demo.css">
-  <script src="js/demo.js"></script>
+  <script src="src/js/jquery-1.11.3.min.js"></script>
+  <script src="src/js/jquery.sticky-block.js"></script>
+  <link rel="stylesheet" href="example/css/demo.css">
+  <script src="example/js/demo.js"></script>
 
   <script>
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-        afterLoad($(this), 3);
+        afterLoad($(this), 2);
       });
 
     });
 
-    $(window).load(function() {
 
-      var footer = $('.footer');
+    $(window).load(function() {
 
       $('.js-float-block').stickyBlock({
         'top': 20,
         'start': {
+          'offset': 20,
           'element': $('.js-start'),
           'border': 'bottom'
         },
         'end': {
-          'element': footer,
+          'element': $('.footer'),
           'offset': 20
         }
       });
 
-      $('.js-float-block-2').stickyBlock({
-        'top': 20,
-        'start': {
-          'element': $('.js-start-2'),
-          'border': 'bottom'
-        },
-        'end': {
-          'element': footer,
-          'offset': 100
-        }
-      });
-
-    })
-
+    });
   </script>
 </head>
 <body>
@@ -60,30 +47,7 @@
 </div>
 <div class="header"></div>
 <div class="wrapper">
-  <div class="sidebar-300 left">
-    <div class="static-block static-block--big">
-      <h2 class="title">I'm  big static</h2>
-    </div>
-    <div class="static-block">
-      <h2 class="title">I'm static</h2>
-    </div>
-    <div class="static-block static-block--big">
-      <h2 class="title">I'm big static</h2>
-    </div>
-    <div class="float-block js-float-block">
-      <h2 class="title">I'm floating<br>end offset 20</h2>
-    </div>
-    <div class="static-block">
-      <h2 class="title">I'm static</h2>
-    </div>
-    <div class="static-block">
-      <h2 class="title">I'm static</h2>
-    </div>
-    <div class="static-block js-start static-block--big">
-      <h2 class="title">I'm big static</h2>
-    </div>
-  </div>
-  <div class="content-660">
+  <div class="content-default">
     <h2 class="title">main content</h2>
     <p>
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -162,8 +126,8 @@
     <div class="static-block static-block--big">
       <h2 class="title">I'm  big static</h2>
     </div>
-    <div class="float-block js-float-block-2">
-      <h2 class="title">I'm floating<br>end offset 100</h2>
+    <div class="float-block js-float-block">
+      <h2 class="title">I'm floating</h2>
     </div>
     <div class="static-block">
       <h2 class="title">I'm static</h2>
@@ -171,7 +135,7 @@
     <div class="static-block">
       <h2 class="title">I'm static</h2>
     </div>
-    <div class="static-block js-start-2 static-block--big">
+    <div class="static-block js-start static-block--big">
       <h2 class="title">I'm big static</h2>
     </div>
   </div>

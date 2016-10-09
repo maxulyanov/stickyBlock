@@ -3,56 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Sticky Block</title>
-  <script src="../src/js/jquery-1.11.3.min.js"></script>
-  <script src="../src/js/jquery.sticky-block.js"></script>
-  <link rel="stylesheet" href="css/demo.css">
-  <script src="js/demo.js"></script>
+  <link rel="stylesheet" href="src/css/jquery.sticky-block-animate.css">
+  <script src="src/js/jquery-1.11.3.min.js"></script>
+  <script src="src/js/jquery.sticky-block.js"></script>
+  <link rel="stylesheet" href="example/css/demo.css">
+  <script src="example/js/demo.js"></script>
 
   <script>
     $(document).ready(function() {
 
       $('.header').load('navigation.html', function() {
-        afterLoad($(this), 1);
-      });
-
-      $('.js-float-block').on('sticky-block-start', function() {
-        $(this).find('.status').text('Status: Start');
-        console.log('start');
-      });
-
-      $('.js-float-block').on('sticky-block-end', function() {
-        $(this).find('.status').text('Status: End');
-        console.log('end');
-      });
-
-
-      $('.js-float-block').on('sticky-block-default', function() {
-        $(this).find('.status').text('Status: Default');
-        console.log('default');
+        afterLoad($(this), 5);
       });
 
     });
 
     $(window).load(function() {
 
+      var footer = $('.footer');
       $('.js-float-block').stickyBlock({
         'top': 20,
+        'animate': 'bounceIn',
         'start': {
-          'element': $('.before-header'),
-          'border': 'bottom',
-          'offset': 44
+          'element': $('.js-start'),
+          'offset': 0,
+          'border': 'bottom'
         },
         'end': {
-          'element': $('.footer'),
+          'element': footer,
           'offset': 20
-        },
-        returnToInitialState: function() {
-          if(window.innerWidth < 1280) {
-            return true;
-          }
         }
       });
-
 
     });
   </script>
@@ -143,10 +124,21 @@
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
   </div>
-  <div class="sidebar-300" style="padding-top: 20px;">
-    <div class="float-block js-float-block">
-      <h2 class="title">I'm floating</h2>
-      <span class="status">Status: null</span>
+  <div class="sidebar-300">
+    <div class="static-block">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="static-block">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="static-block static-block--big">
+      <h2 class="title">I'm big static</h2>
+    </div>
+    <div class="static-block js-start ">
+      <h2 class="title">I'm static</h2>
+    </div>
+    <div class="float-block hidden js-float-block">
+      <h2 class="title">I'm hidden floating</h2>
     </div>
   </div>
 </div>
