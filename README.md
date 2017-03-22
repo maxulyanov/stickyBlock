@@ -2,7 +2,7 @@ stickyBlock
 ===============
 This is make any block floating on your page easily
 
-##Getting started
+## Getting started
 1. Include jQuery
 2. Include stickyBlock
 3. Call stickyBlock with your options after window load
@@ -22,7 +22,7 @@ This is make any block floating on your page easily
 </script>
 ```
 
-##Options
+## Options
 Options list:
 <table>
     <tr>
@@ -126,7 +126,7 @@ If none of the parent element does not have a <code>position: relative</code> - 
     </tr>
 </table>
 
-##Events
+## Events
 Events list:<br>
 <code>sticky-block-start</code> - when an element begins floating<br>
 <code>sticky-block-end</code> - when the element reaches the limit<br>
@@ -147,7 +147,7 @@ Events list:<br>
 </script>
 ```
 
-##Methods
+## Methods
 <code>destroy</code> - remove element from stickyBlock
 ```html
 <script>
@@ -155,7 +155,7 @@ Events list:<br>
 </script>
 ```
 
-##Animation effects
+## Animation effects
 Effects list:<br>
  <code>You must connect - jquery.sticky-block-animate.css for animation</code> 
 - fadeIn
