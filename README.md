@@ -167,8 +167,8 @@ Effects list:<br>
 - flipInX
 - flipInY
 
-##Browser Support
+## Browser Support
 All modern browsers and IE9+ (animation effects IE10+)
 
-##Example
+## Example
 See example - <a href="https://m-ulyanov.github.io/stickyblock/demo/">stickyBlock</a>
