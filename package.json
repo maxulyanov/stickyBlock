@@ -1,6 +1,6 @@
 {
   "name": "sticky-block",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "This is make any block floating on your page easily",
   "main": "index.js",
   "scripts": {

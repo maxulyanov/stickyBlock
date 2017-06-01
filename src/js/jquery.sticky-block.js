@@ -1,17 +1,38 @@
-
 /*
  * stickyBlock: This is make any block floating on your page easily
- * 1.1.2
- *
  * By Max Ulyanov
  * Source: https://github.com/M-Ulyanov/stickyBlock
  * Example ttp://m-ulyanov.github.io/stickyblock/demo/
  */
 
-
-;(function ($) {
-
-  'use struct';
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // Node/CommonJS
+    module.exports = function( root, jQuery ) {
+      if ( jQuery === undefined ) {
+        // require('jQuery') returns a factory that requires window to
+        // build a jQuery instance, we normalize how we use modules
+        // that require this pattern but the window provided is a noop
+        // if it's defined (how jquery works)
+        if ( typeof window !== 'undefined' ) {
+          jQuery = require('jquery');
+        }
+        else {
+          jQuery = require('jquery')(root);
+        }
+      }
+      factory(jQuery);
+      return jQuery;
+    };
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
+  'use strict';
 
   var stickyBlocks = {};
   var countId = 0;
@@ -123,7 +144,7 @@
 
 
     /*
-        Call methods plugin during DOM events
+     Call methods plugin during DOM events
      */
     setEvents: function () {
 
@@ -159,7 +180,7 @@
         $(block.clone).height(data.height);
 
         if (block.wrapper.is('.' + classes.fixed + ',' + '.' + classes.absolute)
-            && current === options.start.element) {
+          && current === options.start.element) {
           data.width = current.outerWidth();
           data.height = current.outerHeight(true);
           return data;
@@ -188,11 +209,11 @@
         }
         else if (options[point].border === 'bottom') {
           currentData[point + 'Position'] = options[point].element.offset().top +
-              options[point].element.outerHeight();
+            options[point].element.outerHeight();
         }
         else {
           methods.error('Invalid value: ' + options[point].border +
-              '! Field "border" requires value - "top" or "bottom"');
+            '! Field "border" requires value - "top" or "bottom"');
           return false;
         }
       }
@@ -236,7 +257,7 @@
         wrapper.css({
           'top': limit - data.offsetParent
         })
-        .addClass(classes.absolute).removeClass(classes.fixed);
+          .addClass(classes.absolute).removeClass(classes.fixed);
         methods.callEvents(block, 'sticky-block-end');
       }
       else if (scrollTop >= data.startPosition + options.start.offset) {
@@ -462,5 +483,4 @@
     }
 
   };
-
-})(jQuery);
+}));
