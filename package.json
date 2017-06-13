@@ -1,6 +1,6 @@
 {
   "name": "sticky-block",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "This is make any block floating on your page easily",
   "main": "src/js/jquery.sticky-block.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/M-Ulyanov/stickyBlock.git"
   },
   "author": "Max Ulyanov",
-  "license": " GNU GENERAL PUBLIC LICENSE",
+  "license": "GNU GENERAL PUBLIC LICENSE",
   "bugs": {
     "url": "https://github.com/M-Ulyanov/stickyBlock/issues"
   },

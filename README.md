@@ -3,6 +3,9 @@ stickyBlock
 This is make any block floating on your page easily
 
 ## Getting started
+`npm install sticky-block --save` <br>
+`import "sticky-block";`
+### Old way
 1. Include jQuery
 2. Include stickyBlock
 3. Call stickyBlock with your options after window load
