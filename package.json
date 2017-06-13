@@ -1,6 +1,6 @@
 {
   "name": "sticky-block",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "This is make any block floating on your page easily",
   "main": "src/js/jquery.sticky-block.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/M-Ulyanov/stickyBlock/issues"
   },
-  "homepage": "https://github.com/M-Ulyanov/stickyBlock#readme"
+  "homepage": "https://github.com/M-Ulyanov/stickyBlock#readme",
+  "dependencies": {
+    "jquery": ">=1.9.1"
+  }
 }
